@@ -312,6 +312,7 @@ class TrajectoryController : public ControllerBase
             if (_runtime>0 && _traj->GetNumWaypoints()>0)
             {
                 RAVELOG_DEBUG("Found %d waypoints, runtime is %f.\n",_traj->GetNumWaypoints(),_runtime);
+                _running=true;
                 return true;
             }
             else {
